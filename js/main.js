@@ -55,3 +55,18 @@ if(localStorage.getItem("theme") === "dark"){
     themeBtn.innerHTML =
     '<i class="fa-solid fa-sun"></i>';
 }
+// spinner
+window.addEventListener("load", () => {
+
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hide");
+
+        setTimeout(() => {
+            preloader.remove();
+        }, 800);
+
+    }, 2000); // 2 seconds
+
+});
